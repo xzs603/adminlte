@@ -20,16 +20,6 @@
 
     <style>
 	div.content-wrapper>iframe { width: 100%; height: 100%; border: 0 none; }
-
-
-
-
-
-
-
-
-
-
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -135,7 +125,7 @@
                     </span>
                                     </a>
                                     <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                                        <li><a href="pages/index.html"><i class="fa fa-circle-o"></i> Level Three</a></li>
                                         <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
                                     </ul>
                                 </li>
@@ -372,16 +362,10 @@
     $('ul.tree li>a').not(function(i) {
       return $(this).attr('href') =='#';
     }).attr('target', 'contFrm');
+    $('ul.tree>li>a').click(function(){
+      $(this).closest('li').addClass('active').siblings().removeClass('active');
+    });
   });
-
-
-
-
-
-
-
-
-
 </script>
 </body>
 </html>
